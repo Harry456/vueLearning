@@ -73,4 +73,20 @@ It doesn't know if the change of second counter influences the result method and
 this method as well.
 keep in mind, everything stored in computed can be used just like you use a property in the data object.
 
+*** Binding Classes***
+Set a className based on a variable is true or false. like toggle
+:class={className:variableNameToValidate}
+So @click change the variable value to true or false and set the class name as per to it.
+
+Eg:
+<div class="demo" :class="{ danger: toggle }">
+  <p>This section to check toggle class</p>
+  <button @click="toggle = !toggle">Toggle Bg</button>
+</div>
+data() {
+    return {
+      toggle: false,
+    };
+  },
+
 */

@@ -3,6 +3,7 @@
     <FirstComponent />
     <Events />
     <DataBinding />
+    <Computed />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import FirstComponent from './components/FirstComponent.vue';
 import Events from './components/Events.vue';
 import DataBinding from './components/DataBinding.vue';
+import Computed from './components/Computed.vue';
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     FirstComponent,
     Events,
     DataBinding,
+    Computed,
   },
 };
 </script>

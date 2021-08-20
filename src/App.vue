@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <FirstComponent />
+    <Events />
+    <DataBinding />
   </div>
 </template>
 
 <script>
 import FirstComponent from './components/FirstComponent.vue';
+import Events from './components/Events.vue';
+import DataBinding from './components/DataBinding.vue';
 
 export default {
   name: 'App',
   components: {
     FirstComponent,
+    Events,
+    DataBinding,
   },
 };
 </script>

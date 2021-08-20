@@ -5,6 +5,9 @@
       {{ changeTitle() }}
     </p>
     <div v-html="finishedLink"></div>
+    <div class="nest">
+      <p></p>
+    </div>
   </div>
 </template>
 

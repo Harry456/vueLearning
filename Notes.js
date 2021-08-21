@@ -89,4 +89,52 @@ data() {
     };
   },
 
+// Style Binding: 
+Here myStyle already holds a set of style and again we are adding additional styles to it, in this casee height is additional style. 
+We has this myStyle variable defined in computed properties.
+
+<div class="demo" :style="[myStyle, { height: width + 'px' }]">
+      <p>Using Style via bind :style</p>
+</div>
+
+computed: {
+    divClasses: function() {
+      return {
+        danger: this.toggle,
+        info: !this.toggle,
+      };
+    },
+    myStyle: function() {
+      return {
+        background: this.color,
+        width: this.width + 'px',
+      };
+    },
+  },
+
+Conclusion:
+1.We can use classBinding For style :class
+  eg:
+  Format" 
+  :class="{className: !variableName, className: VariableName}"
+  eg: :class="{danger: !toggle, info: toggle}"
+2.We can also use a object of class - Above class Object can define separately.
+Computed: {
+    divClasses: function() {
+      return {
+        danger: this.toggle,
+        info: !this.toggle,
+      };
+    },
+},
+3. Using Style Bind :style.
+:style="[myStyle, { height: boxWidth + 'px' }]"
+  computed: {
+   myStyle: function() {
+      return {
+        background: this.bgColor,
+        width: this.boxWidth + 'px',
+      };
+    },
+  },
 */

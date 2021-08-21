@@ -5,6 +5,7 @@
     <DataBinding />
     <Computed />
     <CssClasses />
+    <Conditional />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Events from './components/Events.vue';
 import DataBinding from './components/DataBinding.vue';
 import Computed from './components/Computed.vue';
 import CssClasses from './components/CssClasses.vue';
+import Conditional from './components/Condiitionals/Conditional.vue';
 
 export default {
   name: 'App',
@@ -23,6 +25,7 @@ export default {
     DataBinding,
     Computed,
     CssClasses,
+    Conditional,
   },
 };
 </script>

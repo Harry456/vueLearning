@@ -38,8 +38,7 @@ export default {
       toggle: false,
       color: 'green',
       bgColor: 'gray',
-      width: 250,
-      boxWidth: 350,
+      boxWidth: 150,
     };
   },
   computed: {

@@ -7,7 +7,8 @@
     <CssClasses />
     <Conditional />
     <Basic /> -->
-    <LifeCycle />
+    <!-- <LifeCycle /> -->
+    <Parent />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import CssClasses from './components/CssClasses.vue';
 import Conditional from './components/Condiitionals/Conditional.vue';
 import Basic from './components/UnderStandingVue/Basic.vue';
 import LifeCycle from './components/UnderStandingVue/LifeCycle.vue';
+import Parent from './components/CompCommunication/Parent.vue';
 
 export default {
   name: 'App',
@@ -32,6 +34,7 @@ export default {
     Conditional,
     Basic,
     LifeCycle,
+    Parent,
   },
 };
 </script>

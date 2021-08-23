@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <FirstComponent />
+    <!-- <FirstComponent />
     <Events />
     <DataBinding />
     <Computed />
     <CssClasses />
     <Conditional />
+    <Basic /> -->
+    <LifeCycle />
   </div>
 </template>
 
@@ -16,6 +18,8 @@ import DataBinding from './components/DataBinding.vue';
 import Computed from './components/Computed.vue';
 import CssClasses from './components/CssClasses.vue';
 import Conditional from './components/Condiitionals/Conditional.vue';
+import Basic from './components/UnderStandingVue/Basic.vue';
+import LifeCycle from './components/UnderStandingVue/LifeCycle.vue';
 
 export default {
   name: 'App',
@@ -26,6 +30,8 @@ export default {
     Computed,
     CssClasses,
     Conditional,
+    Basic,
+    LifeCycle,
   },
 };
 </script>

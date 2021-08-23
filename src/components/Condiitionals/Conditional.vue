@@ -78,7 +78,7 @@
       </div>
 
       <!-- Single Object -->
-      <div v-for="(value, key, idx) in user" :key="idx">
+      <div v-for="(value, key, idx) in user" :key="value">
         <h1>{{ key.toUpperCase() }}: {{ value }}</h1>
       </div>
     </div>

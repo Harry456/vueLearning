@@ -13,4 +13,12 @@ The first way of doing it, is that
 Emitting event:
 If a component should talk to its parent and let the parent know that something happened, that component should emit an event to which the parent can listen. And indeed you can emit your own custom events inside of your Vue components.
 
+Passing Data Working in UniDirectional.
+For:
+Eg: Parent can pass data to children,but one child can't pass data to another sibling.
+If we want to do that we want pass the data from one child to parent and send that data to another child. Basically passing data upwards. 
+Passing data from child to parent
+1.with custom event;
+2.Via callback functions
+
 */

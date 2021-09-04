@@ -3,6 +3,24 @@
     <h2>Child Component</h2>
     <p>{{ id }} - {{ name }} - {{ age }} - {{ isDev ? 'True' : 'False' }}</p>
     <button @click="DeleteUser">DeleteUser</button>
+
+    <br />
+    <br />
+    <div class="custom_event">
+      <h2>Custom Events - Child Component</h2>
+      <p>Trigerring data manipulation three level upwards.</p>
+      <p>
+        Onclick box will appear which is in app component. Btn is in grandChild
+        component
+      </p>
+      <button @click="toggleColor" class="btn">Toggle Box</button>
+    </div>
+    <!-- Alternative way for data manipulating -->
+    <div class="callbackFunction">
+      <h3>CallBack Function</h3>
+      <p>Alternative way for data manipulating - In Parent Function</p>
+      <p>1st Child: {{ fullName }}</p>
+    </div>
   </div>
 </template>
 
@@ -28,11 +46,14 @@ export default {
     isDev: {
       type: Boolean,
     },
+    fullName: String,
   },
   methods: {
     DeleteUser() {
-      console.log(this.id);
       this.$emit('Delete-User', this.id);
+    },
+    toggleColor() {
+      this.$emit('toggle', 'Hello toggle');
     },
   },
 };

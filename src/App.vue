@@ -8,7 +8,17 @@
     <Conditional />
     <Basic /> -->
     <!-- <LifeCycle /> -->
-    <Parent />
+
+    <Parent @toggle="toggleColor" />
+
+    <br />
+    <br />
+
+    <div>
+      <div class="box d-none" :class="{ 'd-block': isToggle }">
+        {{ isToggle }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -36,10 +46,22 @@ export default {
     LifeCycle,
     Parent,
   },
+  data() {
+    return {
+      isToggle: false,
+    };
+  },
+  methods: {
+    toggleColor(e) {
+      console.log(e, 'From app');
+      this.isToggle = !this.isToggle;
+      console.log(this.isToggle);
+    },
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,5 +69,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+
+  .d-none {
+    display: none;
+  }
+  .d-block {
+    display: block !important;
+  }
 }
 </style>

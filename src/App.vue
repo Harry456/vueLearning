@@ -1,25 +1,30 @@
 <template>
   <div id="app">
-    <FirstComponent />
+    <!-- <FirstComponent />
     <Events />
     <DataBinding />
-    <Computed />
+    <Computed /> -->
+
+    <!-- Advanved Component Usage -->
+    <Parent />
   </div>
 </template>
 
 <script>
-import FirstComponent from './components/FirstComponent.vue';
-import Events from './components/Events.vue';
-import DataBinding from './components/DataBinding.vue';
-import Computed from './components/Computed.vue';
+import FirstComponent from "./components/FirstComponent.vue";
+import Events from "./components/Events.vue";
+import DataBinding from "./components/DataBinding.vue";
+import Computed from "./components/Computed.vue";
+import Parent from "./components/EventBus/Parent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     FirstComponent,
     Events,
     DataBinding,
     Computed,
+    Parent,
   },
 };
 </script>

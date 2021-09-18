@@ -4,6 +4,7 @@
     <Events />
     <DataBinding />
     <Computed /> -->
+    <<<<<<< HEAD
     <!-- <appQuote>
       <h1 slot="title">{{ quoteTitle }}</h1>
       <h2 slot="content">A wonderful quote</h2>
@@ -17,6 +18,11 @@
         <h2 slot="content">A wonderful quote</h2>
       </component>
     </keep-alive>
+    =======
+
+    <!-- Advanved Component Usage -->
+    <Parent />
+    >>>>>>> 89bc973fa722d28a9ee3b50d53b2a9d0cd6b5b9d
   </div>
 </template>
 
@@ -48,6 +54,20 @@ export default {
       quoteTitle: 'This is Quote Title',
       selectedComponent: 'appQuote',
     };
+import FirstComponent from "./components/FirstComponent.vue";
+import Events from "./components/Events.vue";
+import DataBinding from "./components/DataBinding.vue";
+import Computed from "./components/Computed.vue";
+import Parent from "./components/EventBus/Parent.vue";
+
+export default {
+  name: "App",
+  components: {
+    FirstComponent,
+    Events,
+    DataBinding,
+    Computed,
+    Parent,
   },
 };
 </script>

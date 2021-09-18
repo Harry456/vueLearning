@@ -4,12 +4,19 @@
     <Events />
     <DataBinding />
     <Computed /> -->
-    <!-- <app-quote></app-quote> -->
-    <h1>This is app</h1>
-    <appQuote>
+    <!-- <appQuote>
       <h1 slot="title">{{ quoteTitle }}</h1>
       <h2 slot="content">A wonderful quote</h2>
-    </appQuote>
+    </appQuote> -->
+    <button @click="selectedComponent = 'appQuote'">AppQuote</button>
+    <button @click="selectedComponent = 'One'">ComponentOne</button>
+    <button @click="selectedComponent = 'Two'">ComponentTwo</button>
+    <keep-alive>
+      <component :is="selectedComponent">
+        <h1 slot="title">{{ quoteTitle }}</h1>
+        <h2 slot="content">A wonderful quote</h2>
+      </component>
+    </keep-alive>
   </div>
 </template>
 
@@ -19,6 +26,8 @@ import Events from './components/Events.vue';
 import DataBinding from './components/DataBinding.vue';
 import Computed from './components/Computed.vue';
 import Quote from './components/AdvanceComponent/Quote.vue';
+import One from './components/AdvanceComponent/One.vue';
+import Two from './components/AdvanceComponent/Two.vue';
 
 export default {
   name: 'App',
@@ -31,10 +40,13 @@ export default {
   // },
   components: {
     appQuote: Quote,
+    One,
+    Two,
   },
   data() {
     return {
       quoteTitle: 'This is Quote Title',
+      selectedComponent: 'appQuote',
     };
   },
 };

@@ -82,3 +82,20 @@ The unnamed slot are defaults slots.
 */
 
 // Loading Component Dynamically:
+/*
+  <component :is="componentName"></component>
+  :is attribute compulsory attribute that is required to specify the component name.
+
+  So if specify the variable name :is attribute we can dynamically change the variable name that refers to any other component.
+  we need to register component name in components object.
+
+  Dynamic Component Behaviour:
+  When we switch into new component, the old component is destroyed, if we switch back to that component it was new created. This is the behaviour of Dynamic rendering compoment using <component :is="componentName"></component></component> 
+
+  To prevent this behaviour we can wrap the <component></component> in <keep-alive></keep-alive> tag.
+  <Keep-alive></Keep-alive> tag
+
+  Two LifeCycle methods from Dynamic Components:
+  Activated - when display that component
+  DeActivated - when switches to other component
+*/

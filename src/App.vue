@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <FirstComponent />
+    <!-- <FirstComponent />
     <Events />
     <DataBinding />
-    <Computed />
+    <Computed /> -->
+    <VDirectives />
   </div>
 </template>
 
@@ -12,14 +13,16 @@ import FirstComponent from './components/FirstComponent.vue';
 import Events from './components/Events.vue';
 import DataBinding from './components/DataBinding.vue';
 import Computed from './components/Computed.vue';
+import VDirectives from './components/Vdirectives/VDirectives.vue';
 
 export default {
   name: 'App',
   components: {
-    FirstComponent,
-    Events,
-    DataBinding,
-    Computed,
+    // FirstComponent,
+    // Events,
+    // DataBinding,
+    // Computed,
+    VDirectives,
   },
 };
 </script>
